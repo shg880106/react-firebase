@@ -1,3 +1,5 @@
 react-firebase
 
 Con la extension ES7+ React/Redux/React-Native snippets nos permite crear componentes mas faciles con el comando rfc
+
+https://www.mockaroo.com/ para generar json
