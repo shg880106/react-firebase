@@ -9,10 +9,12 @@ function TextH2() {
     setText(e.target.value);
   };
 
-  //useEffect, recive dos parametros, funcion y array
+  //useEffect, recive dos parametros, funcion anonima y array, el 
+  //, [] es para cuando se monta pero no se actualiza
+  //cuando se desmonta hay que retornar algo
   useEffect( () => {
-    console.log("Componente montado");
-  });
+    console.log("Componente montado");    
+  }, []);
 
   return (
     <div>
