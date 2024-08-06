@@ -1,4 +1,4 @@
-// import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Navbar from './components/Navbar';
 import './hojas-de-estilo/App.css';
