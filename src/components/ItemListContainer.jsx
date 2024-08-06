@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import pedirProductos from './PedirProductos';
+import pedirDatos from '../helpers/pedirDatos';
 import ItemList from './ItemList';
 
-function ItemListContainer() {
+const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
-  
+
   useEffect(() => {
-    pedirProductos()
+    pedirDatos()
       .then((res) => {
         setProductos(res);
-    })
-  }, []);
-
+      })
+  }, [])
+  
   return (
-   <div>
-      <ItemList productos={productos} />
-   </div>
-  );
-};
+    <div>
+      <ItemList productos={productos}/>
+    </div>
+  )
+}
 
 export default ItemListContainer;
+
