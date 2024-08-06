@@ -1,10 +1,10 @@
 import './App.css';
-import ItemListContainer from './componentes/ItemListContainer';
+import PokemonList from './componentes/PokemonList';
 
 function App() {
   return (
     <div >
-      <ItemListContainer />
+      <PokemonList />
     </div>
   );
 }
