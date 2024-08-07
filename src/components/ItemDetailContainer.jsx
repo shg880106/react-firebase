@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { pedirItemPorId } from '../helpers/pedirDatos';
+import pedirItemPorId from '../helpers/pedirItemPorId';
 import ItemDetail from '../components/ItemDetail';
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = ( {itemID} ) => {
+const ItemDetailContainer = () => {
   
   const [item, setItem] = useState(null);
 
+  const id = useParams().id;
+
   useEffect(() => {
-    pedirItemPorId(itemID)
+    pedirItemPorId(Number(id))
       .then((res) => {
         setItem(res);
       })
-  }, [])
+  }, [id])
 
   return (
     <div>
@@ -21,4 +24,4 @@ const ItemDetailContainer = ( {itemID} ) => {
   )
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

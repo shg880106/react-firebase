@@ -7,3 +7,11 @@ https://www.mockaroo.com/ para generar json
 Que es una promesa?
 
 con map se muestran los array enteros
+
+react router dom: npm install react-router-dom para las rutas
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { Link } from 'react-router-dom': componente para que cuando cambiemos de pagina no se cargue
+
+
+
