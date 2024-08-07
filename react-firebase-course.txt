@@ -73,3 +73,8 @@ gestionar formularios: npm install react-hook-form para trabajar con la libreria
           onChange={handleValores}
           name='telefono' /> */}
 
+Context: se usa para acceder a algo desde cualquier lado de la apliacion
+estado global o variables globales.
+
+//para poder acceder a la variable global
+  const { user, edad } = useContext(CartContext);
