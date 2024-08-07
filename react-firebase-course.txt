@@ -14,4 +14,62 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom': componente para que cuando cambiemos de pagina no se cargue
 
 
+gestionar formularios: npm install react-hook-form para trabajar con la libreria de formularios de React
+//nivel 1 de formulario
+//estado para cada input esta forma es la primitiva
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  
+//para poder enviar los datos que estan en los inputs
+  const handleNombre = (e) => {
+    setNombre(e.target.value);
+}
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+}
+  
+//nivel 2 de formulario
+//esta forma es la ideal para trabajar con formularios
+  const [valores, setValores] = useState({
+    nombre: "",
+    email: "",
+    telefono: ""
+  });
+  
+  const handleValores = (e) => {
+    setValores({
+      ...valores, 
+      [e.target.name]: e.target.value
+    })
+  }
+  
+  //para que la pagina no se recargue
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Enviado");
+  }
+  
+  {/* trabajando con formulario nivel 2 
+          
+        <input 
+          type="text" 
+          placeholder='Ingresa tu nombre' 
+          value={valores.nombre} 
+          onChange={handleValores}
+          name='nombre' />
+
+        <input 
+          type="email" 
+          placeholder='Ingresa tu email' 
+          value={valores.email} 
+          onChange={handleValores}
+          name='email' />
+
+        <input 
+          type="phone"
+          placeholder='Escriba su número de teléfono'
+          value={valores.telefono}
+          onChange={handleValores}
+          name='telefono' /> */}
 

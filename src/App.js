@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import './hojas-de-estilo/App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nosotros from './components/Nosotros';
+import Contacto from './components/Contacto';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/productos" element={<ItemListContainer />} />
           <Route path="/productos/:categoria" element={<ItemListContainer />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
 
       </BrowserRouter>      

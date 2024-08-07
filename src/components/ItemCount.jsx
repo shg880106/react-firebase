@@ -1,5 +1,4 @@
 
-
 const ItemCount = ( {cantidad, handleRestar, handleSumar, handleAgregar} ) => {
 
   return (
