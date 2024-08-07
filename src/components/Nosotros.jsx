@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 
 const Nosotros = () => {
-
+  
+  //trabajando con addEventListener
   useEffect(() => {
     const clickear = () => {
       console.log("Click");
