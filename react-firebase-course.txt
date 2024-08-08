@@ -78,3 +78,10 @@ estado global o variables globales.
 
 //para poder acceder a la variable global
   const { user, edad } = useContext(CartContext);
+  
+Local storage: //hacer un localstorage
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+
+Firebase: npm install firebase
+
+import { collection } from 'firebase/firestore' : para poder usar las colecciones que creamos en firebase
