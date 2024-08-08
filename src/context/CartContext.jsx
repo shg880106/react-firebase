@@ -1,10 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
+//hacer un localstorage
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+
 export const CartProvider = ({children}) => {
   //estado global para el carrito
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useState(carritoInicial);
 
   const agregarAlCarrito = (item, cantidad) => {
     const itemAgregado = {...item, cantidad};
@@ -36,6 +39,12 @@ export const CartProvider = ({children}) => {
   const vaciarCarrito = () => {
     setCarrito([]);
   }
+
+  //para que cuando se actualicen las paginas el carrito siga con productos: localstorage
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito])
+  
 
   return (
     <CartContext.Provider 
