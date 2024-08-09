@@ -84,4 +84,27 @@ const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
 Firebase: npm install firebase
 
-import { collection } from 'firebase/firestore' : para poder usar las colecciones que creamos en firebase
+import { collection, getDocs, query, where } from 'firebase/firestore' : para poder usar las colecciones que creamos en firebase
+
+Subir datos a : 
+
+Desplegar
+git init
+git add .
+git commit -m "First commit" 
+ir a github y crear un repositorio
+luego copiar las 3 lineas de ...or push an existing repository from the command line
+pegarlas en la terminal
+y se da enter para que se puchee
+
+ir a Netlify y hacer Login con github
+ir a Sites y seleccionasmo el que queremos.
+chequear que en Build command este npm run build
+Publish directory: dist
+se presiona el boton de Deploy
+ver el preview y ahi vemos la pagina
+Open poduction deploy
+
+site configuration: site details, change site name: y se le pone un nombre que queramos
+
+cuando se le hace commit y push al codigo en github, automaticamente se actualiza un nuevo deploy con los cambios: https://youtube-vite-test.netlify.app/

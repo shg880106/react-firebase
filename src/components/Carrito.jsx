@@ -1,5 +1,8 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
+import { MdRemoveShoppingCart, MdShoppingCartCheckout } from "react-icons/md";
+
 
 const Carrito = () => {
 
@@ -27,8 +30,9 @@ const Carrito = () => {
       {
         carrito.length > 0 ?
         <>
-          <h2>Precio total: $ {precioTotalDelCarrito()}</h2> 
-          <button onClick={handleVaciar}>Vaciar</button>
+          <h2>Precio total: $ {precioTotalDelCarrito()}</h2>
+          <button className="vaciar-carrito" onClick={handleVaciar}><MdRemoveShoppingCart /> Vaciar</button>
+          <button className="finalizar-compra"><Link to="/checkout"><MdShoppingCartCheckout />Finalizar compra</Link></button>
         </> :
         <h2>El carrito está vacío!</h2>
 

@@ -15,8 +15,6 @@ const ItemListContainer = () => {
   // cogiendo la categoria de un producto
   const categoria = useParams().categoria;
 
-  console.log(categoria);
-
   useEffect(() => {
     const productosRef = collection(db, "productos");
 

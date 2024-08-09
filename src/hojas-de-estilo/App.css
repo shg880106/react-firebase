@@ -18,7 +18,7 @@
 
 .main-title {
     margin-top: 2rem;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .navbar {
@@ -129,7 +129,7 @@
     margin-top: 1rem;
 }
 
-.item-count button, .agregar-al-carrito, .enviar {
+.item-count button, .agregar-al-carrito, .enviar, .finalizar-compra, .vaciar-carrito {
     background-color: var(--clr-main);
     border: 0;
     width: 2rem;
@@ -147,12 +147,12 @@
     transition: .2s;
 }
 
-.item-count button:hover, .agregar-al-carrito:hover, .enviar:hover {
+.item-count button:hover, .agregar-al-carrito:hover, .enviar:hover, .finalizar-compra:hover, .vaciar-carrito:hover {
     background-color: white;
     color: black;
 }
 
-.agregar-al-carrito, .enviar {
+.agregar-al-carrito, .enviar, .finalizar-compra, .vaciar-carrito {
     width: auto;
     height: auto;
     margin-top: 1rem;

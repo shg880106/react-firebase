@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Archivo de configuración sensible
+/src/firebase/config.js
